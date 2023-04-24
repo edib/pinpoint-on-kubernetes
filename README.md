@@ -1,5 +1,15 @@
-# Pinpoint
+# Pinpoint Helm Chart for Kubernetes  
 
-Pinpoint is an application monitoring platform.
+Git repository of containerized components of the Pinpoint Application Monitoring for Kubernetes
+Installing Pinpoint on Kubernetes cluster with a single command.
 
-Supported 2.5.1 (except batch)
+```
+git clone https://github.com/edib/pinpoint-on-kubernetes.git
+cd pinpoint-on-kubernetes
+
+helm install pinpoint-apm . -f values.yml -n  <pinpoint-ns>
+```
+
+Supported version: 2.5.1
+
+zookeepers and hbase uses pvs. You have to have at least hostpath-pv in your environment.
